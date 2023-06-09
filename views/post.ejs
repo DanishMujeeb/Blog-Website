@@ -1,0 +1,10 @@
+<%- include("header"); -%>
+    <h1><%= post.title %></h1>
+    <hr>
+    <p class="content"><%= post.content %></p>
+    <form class="form" method="post" action="/delete">
+        <% if(searchedUser == "") { %>
+            <button type="submit" class="btn btn-primary py-2 mb-5" value="<%=post._id%>" name="id">Delete Post</button>
+        <% } %>
+    </form>
+<%- include("footer"); -%>

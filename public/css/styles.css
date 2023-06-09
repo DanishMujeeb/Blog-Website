@@ -1,0 +1,73 @@
+.header{
+    background-color: #1abc9c;
+}
+
+.createPost {
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+h1, h2, p, .form, .comments {
+    text-align: center;
+}
+
+.content{
+  text-align: center;
+  margin-right: 15%;
+  margin-left: 15%;
+}
+
+.footer{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  background-color: #1abc9c;
+  bottom: 0;
+}
+
+.img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
+@media (max-width: 992px) {
+  .blog {
+    margin-top: 15px;
+    margin-bottom: -10px;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 1rem;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.signUp{
+  border: none;
+  border-radius: 10%;
+  background-color: #0d6efd;
+  color: white;
+}

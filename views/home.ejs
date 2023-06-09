@@ -1,0 +1,11 @@
+<%- include("header"); -%>
+    <h1><%=username + "'s Blog Posts"%></h1>
+    <hr>
+    <%for(let i=0;i<posts.length;i++) { %> 
+        <h2><%=posts[i].title%></h2>
+        <p>
+            <%=posts[i].content.substring(0, 50) + "..."%>
+            <a href="posts/<%=posts[i].title%>">Read Full Post</a>        
+        </p>
+    <% } %>
+<%- include("footer"); -%>
