@@ -1,7 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
-const _ = require("lodash");
 const mongoose = require("mongoose");
 
 let username = "";
@@ -92,7 +91,7 @@ app.get("/compose", function(req, res) {
     res.render("compose");
 });
 
-app.get("/posts/:name", async function(req, res) {
+app.get("/posts/:postId", async function(req, res) {
     try {
         let document = {};
         if(searchedUser == "") 
@@ -100,7 +99,7 @@ app.get("/posts/:name", async function(req, res) {
         else 
             document = await User.findOne({username: searchedUser});
         document.posts.forEach(function(post) {
-            if(_.lowerCase(post.title) == _.lowerCase(req.params.name)) 
+            if(post._id == req.params.postId) 
                 res.render("post", {post: post, searchedUser: searchedUser}); 
         });
     } catch (err) {
@@ -143,6 +142,6 @@ app.post("/search", async function(req, res) {
     }
 });
 
-app.listen(3000, function() {
-    console.log("Server starterd on port 3000");
+app.listen(process.env.PORT || 3000, function() {
+    console.log("Server has started successfully");
 });
