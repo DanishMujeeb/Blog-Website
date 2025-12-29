@@ -13,7 +13,7 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://danishmujeeb51:Danish7861@cluster0.jejxm7k.mongodb.net/?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://danishmujeeb51_db_user:4mKLoR0YKO7qLAHl@cluster0.hcih97e.mongodb.net/?appName=Cluster0");
 
 const usersPostsSchema = {
     title: String,
